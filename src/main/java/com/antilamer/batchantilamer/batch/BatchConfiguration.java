@@ -1,6 +1,7 @@
 package com.antilamer.batchantilamer.batch;
 
 import com.antilamer.batchantilamer.model.Person;
+import com.antilamer.batchantilamer.repository.PersonRepo;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -48,8 +49,8 @@ public class BatchConfiguration {
 	}
 
 	@Bean
-	public PersonItemWriter writer(DataSource dataSource) {
-		return new PersonItemWriter(dataSource);
+	public PersonItemWriter writer(PersonRepo personRepo) {
+		return new PersonItemWriter(personRepo);
 	}
 	// end::readerwriterprocessor[]
 
