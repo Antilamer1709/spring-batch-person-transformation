@@ -3,16 +3,18 @@ package com.antilamer.batchantilamer.controller;
 import com.antilamer.batchantilamer.model.Person;
 import com.antilamer.batchantilamer.repository.PersonRepo;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("greet")
-public class GreetingController {
+@RestController
+@RequestMapping("person")
+public class PersonController {
 
     private final PersonRepo personRepo;
 
-    public GreetingController(PersonRepo personRepo) {
+    public PersonController(PersonRepo personRepo) {
         this.personRepo = personRepo;
     }
 
