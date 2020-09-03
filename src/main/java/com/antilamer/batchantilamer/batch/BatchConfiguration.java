@@ -4,7 +4,6 @@ import com.antilamer.batchantilamer.model.Person;
 import com.antilamer.batchantilamer.repository.PersonRepo;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
@@ -16,9 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-// tag::setup[]
 @Configuration
-@EnableBatchProcessing
 public class BatchConfiguration {
 
 	@Autowired
@@ -29,9 +26,7 @@ public class BatchConfiguration {
 
 	@Autowired
     public DataSource dataSource;
-	// end::setup[]
 
-	// tag::readerwriterprocessor[]
 	@Bean
 	public JdbcCursorItemReader<Person> reader() {
 		return new JdbcCursorItemReaderBuilder<Person>()
@@ -52,9 +47,7 @@ public class BatchConfiguration {
 	public PersonItemWriter writer(PersonRepo personRepo) {
 		return new PersonItemWriter(personRepo);
 	}
-	// end::readerwriterprocessor[]
 
-	// tag::jobstep[]
 	@Bean
 	public Job importUserJob(JobCompletionNotificationListener listener, Step step1) {
 		return jobBuilderFactory.get("importUserJob")
@@ -74,5 +67,5 @@ public class BatchConfiguration {
 			.writer(writer)
 			.build();
 	}
-	// end::jobstep[]
+
 }
