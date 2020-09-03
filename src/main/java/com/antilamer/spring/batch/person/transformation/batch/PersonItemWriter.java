@@ -20,8 +20,6 @@ public class PersonItemWriter implements ItemWriter<Person> {
 
 
     public void write(List<? extends Person> items) {
-        for (final Person person : items) {
-            personRepo.save(person);
-        }
+        personRepo.saveAll(items);
     }
 }
