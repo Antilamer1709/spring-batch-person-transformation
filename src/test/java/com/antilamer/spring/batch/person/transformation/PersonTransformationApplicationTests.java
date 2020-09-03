@@ -1,10 +1,10 @@
-package com.antilamer.batchantilamer;
+package com.antilamer.spring.batch.person.transformation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BatchAntilamerApplicationTests {
+class PersonTransformationApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,7 +1,7 @@
-package com.antilamer.batchantilamer.controller;
+package com.antilamer.spring.batch.person.transformation.controller;
 
-import com.antilamer.batchantilamer.model.Person;
-import com.antilamer.batchantilamer.repository.PersonRepo;
+import com.antilamer.spring.batch.person.transformation.model.Person;
+import com.antilamer.spring.batch.person.transformation.repository.PersonRepo;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.JobParametersBuilder;

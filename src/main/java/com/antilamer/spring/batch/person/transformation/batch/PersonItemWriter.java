@@ -1,7 +1,7 @@
-package com.antilamer.batchantilamer.batch;
+package com.antilamer.spring.batch.person.transformation.batch;
 
-import com.antilamer.batchantilamer.model.Person;
-import com.antilamer.batchantilamer.repository.PersonRepo;
+import com.antilamer.spring.batch.person.transformation.model.Person;
+import com.antilamer.spring.batch.person.transformation.repository.PersonRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemWriter;

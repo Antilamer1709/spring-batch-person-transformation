@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.antilamer</groupId>
-	<artifactId>batch-antilamer</artifactId>
+	<artifactId>spring-batch-person-transformation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>batch-antilamer</name>
+	<name>spring-batch-person-transformation</name>
 	<description>Batch project</description>
 
 	<properties>

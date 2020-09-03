@@ -1,4 +1,4 @@
-package com.antilamer.batchantilamer.model;
+package com.antilamer.spring.batch.person.transformation.model;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

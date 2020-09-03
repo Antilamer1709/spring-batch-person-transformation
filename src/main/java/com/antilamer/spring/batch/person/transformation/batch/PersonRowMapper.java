@@ -1,6 +1,6 @@
-package com.antilamer.batchantilamer.batch;
+package com.antilamer.spring.batch.person.transformation.batch;
 
-import com.antilamer.batchantilamer.model.Person;
+import com.antilamer.spring.batch.person.transformation.model.Person;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
